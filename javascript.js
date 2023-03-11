@@ -2,9 +2,6 @@
 const container = document.getElementById('grid-container');
 
 
-
-
-
 document.body.addEventListener("click", function(event) {
     // Check if the clicked element is a div with class name "div.grid-cell"
     if (event.target.matches("div.grid-cell")) {
