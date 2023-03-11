@@ -11,7 +11,7 @@ for (let i =0; i < 16; i++){
         let cell = document.createElement('div');
         //Adds a CSS class to the created div. This can be selected in the styles.cc file to style each cell
         cell.classList.add('grid-cell');
-        //
+        //gridRow and gridColumn determine which row or column the cell will be placed in. The +1 is because grids start from 1 in CSS and not 0
         cell.style.gridRow = i + 1;
         cell.style.gridColumn = j + 1;
 

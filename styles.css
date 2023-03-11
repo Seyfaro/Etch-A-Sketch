@@ -5,10 +5,19 @@
     border: 1px solid black;
   }
   
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
   /* Style the grid container */
   #grid-container {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
+    justify-items: center;
+    align-items: center;
     gap: 1px;
+    
   }
