@@ -1,2 +1,2 @@
-# Etch-A-Sketch
+# Pixelator
 Browser game
