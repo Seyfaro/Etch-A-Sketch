@@ -1,23 +1,60 @@
+
+@font-face {
+    font-family: 'Munro';
+    src: url('/Users/seyfaro/repos/Etch-A-Sketch/resources/munro/munro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
 /* Style the grid cells */
 .grid-cell {
     width: 30px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
   }
   
-  body {
+#Page-Title {
+    text-align: center;
+    font-family: 'Munro', sans-serif;
+    font-size: 4em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+}
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    height: 50vh;
   }
+  
   /* Style the grid container */
   #grid-container {
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
     justify-items: center;
     align-items: center;
-    gap: 1px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
     
   }
+
+body {
+  background: linear-gradient(to right, #ff5d9e, #b464ff, #5949ff);
+  background-size: 600% 600%; /* make the gradient larger than the container */
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

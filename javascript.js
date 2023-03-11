@@ -1,6 +1,14 @@
 //Connect to grid in HTML, assign it to the 'container' variable
 const container = document.getElementById('grid-container');
 
+document.body.addEventListener("click", function(event) {
+    // Check if the clicked element is a div with class name "myDiv"
+    if (event.target.matches("div.grid-cell")) {
+      // Modify the selected div
+      event.target.style.backgroundColor = "black";
+    }
+  });
+
 //Create the grid
 //Outer loop: uses 'i' to loop 16 times, i.e 16 x16 = 256 cells
 //Inner loop: creates 16 grid cells, to be looped 16 times
@@ -17,5 +25,8 @@ for (let i =0; i < 16; i++){
 
         //Insert cell into container
         container.appendChild(cell);
+
+
     }
 }
+
