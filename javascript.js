@@ -1,11 +1,15 @@
 //Connect to grid in HTML, assign it to the 'container' variable
 const container = document.getElementById('grid-container');
 
+
+
+
+
 document.body.addEventListener("click", function(event) {
-    // Check if the clicked element is a div with class name "myDiv"
+    // Check if the clicked element is a div with class name "div.grid-cell"
     if (event.target.matches("div.grid-cell")) {
       // Modify the selected div
-      event.target.style.backgroundColor = "black";
+      event.target.style.backgroundColor = 'black';
     }
   });
 
