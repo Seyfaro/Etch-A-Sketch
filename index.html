@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
 </head>
 <body>
-    
+    <h1>Etch-A-Sketch</h1>
+
+    <div id="grid-container">
+
+        <script src="javascript.js"></script>
+        <style>
+            /* Style the grid cells */
+            .grid-cell {
+              width: 30px;
+              height: 30px;
+              border: 1px solid black;
+            }
+      
+            /* Style the grid container */
+            #grid-container {
+              display: grid;
+              grid-template-columns: repeat(16, 1fr);
+              grid-template-rows: repeat(16, 1fr);
+              gap: 1px;
+            }
+          </style>
+    </div>
 </body>
 </html>
