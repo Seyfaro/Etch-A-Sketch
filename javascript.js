@@ -5,6 +5,8 @@ let colour = 'black'
 
 let isMouseDown = false;
 
+const colorPicker = document.querySelector('#color-picker');
+
 //Is the mouse down?
 document.body.addEventListener("mousedown", function(event) {
   // Set isMouseDown to true when the mouse button is pressed down
@@ -27,14 +29,18 @@ document.body.addEventListener("mouseup", function(event) {
   isMouseDown = false;
 });
 
+
 document.body.addEventListener("click", function(event) {
       if (event.target.matches("#changeColour")) {
       //change the selected colour
       let randomColor = Math.floor(Math.random()*16777215).toString(16);
       colour = '#' + randomColor
+      colorPicker.value = colour
     } else if (event.target.matches("#eraser")) {
         //eraser
       colour = 'white';
+    } else if (event.target.matches("#color-picker")) {
+      colour = event.target.value;
     }
   });
 
