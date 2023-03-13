@@ -1,14 +1,21 @@
 //Connect to grid in HTML, assign it to the 'container' variable
 const container = document.getElementById('grid-container');
 
-// Generate a random color
-let randomColor = Math.floor(Math.random()*16777215).toString(16);
+let colour = 'black'
+
 
 document.body.addEventListener("click", function(event) {
     // Check if the clicked element is a div with class name "div.grid-cell"
     if (event.target.matches("div.grid-cell")) {
       // Modify the selected div
-      event.target.style.backgroundColor = '#' + randomColor;
+      event.target.style.backgroundColor = colour;
+     }else if (event.target.matches("#changeColour")) {
+      //change the selected colour
+      let randomColor = Math.floor(Math.random()*16777215).toString(16);
+      colour = '#' + randomColor
+    } else if (event.target.matches("#eraser")) {
+        //eraser
+      colour = 'white';
     }
   });
 
