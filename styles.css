@@ -129,3 +129,28 @@ label {
   width: 50px;
   align-self: center;
 }
+
+.slider {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 25px;
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #000000;
+  cursor: pointer;
+}
