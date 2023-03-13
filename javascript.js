@@ -29,13 +29,9 @@ document.body.addEventListener("mouseup", function(event) {
 
 
 
-/*
+
 document.body.addEventListener("click", function(event) {
-    // Check if the clicked element is a div with class name "div.grid-cell"
-    if (event.target.matches("div.grid-cell")) {
-      // Modify the selected div
-      event.target.style.backgroundColor = colour;
-     }else if (event.target.matches("#changeColour")) {
+      if (event.target.matches("#changeColour")) {
       //change the selected colour
       let randomColor = Math.floor(Math.random()*16777215).toString(16);
       colour = '#' + randomColor
@@ -44,7 +40,7 @@ document.body.addEventListener("click", function(event) {
       colour = 'white';
     }
   });
-*/
+
 
 //Create the grid
 //Outer loop: uses 'i' to loop 16 times, i.e 16 x16 = 256 cells
