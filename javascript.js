@@ -27,9 +27,6 @@ document.body.addEventListener("mouseup", function(event) {
   isMouseDown = false;
 });
 
-
-
-
 document.body.addEventListener("click", function(event) {
       if (event.target.matches("#changeColour")) {
       //change the selected colour
