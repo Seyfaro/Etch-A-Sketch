@@ -3,7 +3,33 @@ const container = document.getElementById('grid-container');
 
 let colour = 'black'
 
+let isMouseDown = false;
 
+//Is the mouse down?
+document.body.addEventListener("mousedown", function(event) {
+  // Set isMouseDown to true when the mouse button is pressed down
+  isMouseDown = true;
+  console.log('Mouse is down!')
+});
+
+document.body.addEventListener("mousemove", function(event) {
+  // Check if the mouse button is down and if the mouse is over a grid cell
+  if (isMouseDown && event.target.matches("div.grid-cell")) {
+    // Modify the selected grid cell
+    event.target.style.backgroundColor = colour;
+  }
+});
+
+
+//Is the mouse NOT down?
+document.body.addEventListener("mouseup", function(event) {
+  // Set isMouseDown to false when the mouse button is released
+  isMouseDown = false;
+});
+
+
+
+/*
 document.body.addEventListener("click", function(event) {
     // Check if the clicked element is a div with class name "div.grid-cell"
     if (event.target.matches("div.grid-cell")) {
@@ -18,6 +44,7 @@ document.body.addEventListener("click", function(event) {
       colour = 'white';
     }
   });
+*/
 
 //Create the grid
 //Outer loop: uses 'i' to loop 16 times, i.e 16 x16 = 256 cells
