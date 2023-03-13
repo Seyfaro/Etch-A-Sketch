@@ -41,6 +41,8 @@ document.body.addEventListener("click", function(event) {
       colour = 'white';
     } else if (event.target.matches("#color-picker")) {
       colour = event.target.value;
+    } else if (event.target.matches("#use")) {
+      colour = colorPicker.value;
     }
   });
 

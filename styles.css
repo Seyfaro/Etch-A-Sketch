@@ -108,10 +108,11 @@ button {
 }
 
 #color-picker {
-  width: 100px; /* Set the width of the color picker */
+  width: 50px; /* Set the width of the color picker */
   height: 50px; /* Set the height of the color picker */
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 1); /* Add a box shadow */
   outline: none; /* Remove the outline */
+  align-self: center;
 }
 
 label {
@@ -120,4 +121,11 @@ label {
   color: white;
   font-size: 1em;
   width: 100px;
+}
+
+#use {
+  
+  font-size: 1em;
+  width: 50px;
+  align-self: center;
 }
